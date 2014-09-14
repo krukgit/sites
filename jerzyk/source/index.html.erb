@@ -1,0 +1,46 @@
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=94767797347&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<center>
+<div class="slider" style="width: 90%">
+  <div class="slide">
+    <div class="left">
+      <%= image_tag "jerzyk.jpg", class: "jerzyk" %>
+    </div>
+    <div class="right">
+
+
+      <h1>Jerzyk (Apus apus)</h1>
+      <b>Jerzyk</b> – naturalny sprzymierzeniec w walce z komarami.
+</br><br/>
+Malejąca liczba jerzyków (badania prowadzone w Wielkiej Brytanii wykazały spadek populacji w latach 1994-2007 o 41%) prowadzi do wzrastającej populacji dokuczliwych komarów. W efekcie finansowane są sztuczne metody odkomarzania terenów miejskich. Może warto powrócić do tych naturalnych?
+</br><br/>
+Przez wiele lat jerzyk, zamieszkujący najchętniej nisze i otwory w blokach z wielkiej płyty – był naturalnym sprzymierzeńcem człowieka w walce z komarami (jeden osobnik potrafi zjeść dziennie nawet 20 tys. komarów). Upodobanie jerzyka do typowo ludzkich form zamieszkania wynika ze specyficznej budowy ciała jerzyka. Uniemożliwia mu ona bytowanie w koronach drzew czy w pobliżu ziemi. Musi zamieszkiwać na wysokości min. 6 m i posiadać przy gnieździe otwarty obszar o średnicy min. 3 m. Ludzkie siedliska, szczególnie wysokie bloki, wokół których rozciąga się wielokrotnie większa przestrzeń są dla niego środowiskiem idealnym (pierwotnie zamieszkiwał skaliste zbocza).
+</br><br/>
+Tymczasem jego populacja z roku na rok maleje. Powszechny proces termomodernizacji, podczas którego uszczelniane są wszystkie otwory w budynkach, likwiduje wieloletnie siedliska jerzyków. Warto pamiętać, że ptaki te wybierają jedno miejsce lęgowe na całe życie i po jego utracie często nie potrafią znaleźć sobie nowego. Stadny charakter jego życia sprawia, że często cała gromada jerzyków, powracająca na wiosnę do Polski i próbująca odnaleźć swoje dotychczasowe lokum – skazana jest na śmierć.
+</br><br/>
+Atutem projektu jest funkcja edukacyjna, która pozwoli na przybliżenie mieszkańcom Lublina tego nieznanego gatunku ptaka – mylonego często z jaskółką.
+Nowoczesne wzornictwo oraz zapewnienie miejsca na oprawy oświetleniowe gwarantuje ciekawe i funkcjonalne uzupełnienie oferty przestrzennej terenów miejskich w Lublinie.
+Realizacja wierzy lęgowej dla jerzyków wyróżniałaby Lublin na tle innych miast w Polsce i za granicą. Obecnie znany jest autorom jeden przykład zrealizowanej takiej wierzy na Warszawskiej Białołęce. Gwarancję powodzenia procesu zasiedlania było w zrealizowanym przykładzie nawoływanie osobników nagraniami odgłosów tego gatunku. Jerzyk jako ptak żyjący w grupie zasiedlił wieże.
+
+    </div>
+    <div style="float:right">
+      <div style="float:left;margin-right:10px;"><a href="https://www.facebook.com/wiezadlajerzykowlublin" target="_blank"><%= image_tag "find_us.png", height: "20px" %></a></div>
+      <div style="float:right" class="fb-like" data-href="https://www.facebook.com/wiezadlajerzykowlublin" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
+    </div>
+
+  </div>
+
+  <% (1..4).each do |i| %>
+    <div class="slide">
+      <%= image_tag "#{i}.png", class: "page" %>
+    </div>
+  <% end %>
+</div>
+</center>

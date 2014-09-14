@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+body {
+  background: white;
+  font-family: sans-serif;
+  height: 100%;
+}
+
+.page {
+    width: 100%;
+}
+
+.right {
+    display: block;
+    height:600px;
+    display: table-cell;
+    margin: 0 0 0 200px;
+    color: #9facb3;
+    vertical-align: middle;
+    text-align: justify !important;
+}
+
+.slide {
+}
+
+.jerzyk {
+    margin-top: -16px !important;
+    height: 768px;
+}
+
+
+.left {
+    float: left;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: black;
+}
