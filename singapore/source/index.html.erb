@@ -1,0 +1,43 @@
+<h1>Jak przetrwac na lotnisku</h1>
+
+<% images = [
+             ["IMG_0586.JPG", "Pozegnaj sie z przyjaciolmi"],
+             ["IMG_0594.JPG", "Pozegnaj sie z rodzicami..."],
+             ["IMG_0587.JPG", "...i rodzenstwem"],
+             ["kasia.jpg", "Takze tym dziwnym!"],
+             ["IMG_0596.JPG", "Obejrzyj Krakow z lotu ptaka"],
+             ["IMG_0597.JPG", "Wysiadz we Frankfurcie"],
+             ["IMG_0599.JPG", "Pojedz autobusem do hali przylotow"],
+             ["IMG_0601.JPG", "Wysiadz z autobusu"],
+             ["IMG_0602.JPG", "I podazaj za tlumem"],
+             ["IMG_0603.JPG", "Znajdz taki monitor"],
+             ["IMG_0605.JPG", "I zlokalizuj Singapur"],
+             ["IMG_0604.JPG", "Uwazaj, moga byc dwa! Zweryfikuj godzine i numer lotu. Zapamietaj numer bramki (Gate)"],
+             ["IMG_0606.JPG", "Nie wychodz z lotniska..."],
+             ["IMG_0607.JPG", "...idz w kierunku Connecting Flights"],
+             ["IMG_0609.JPG", "Podazaj za strzalkami do swojej bramki (lewo)"],
+             ["IMG_0611.JPG", "Prosto"],
+             ["IMG_0614.JPG", "Prawo"],
+             ["IMG_0615.JPG", "Zapomniales gdzie isc? Sprawdz numer bramki na ktoryms z setek monitorow!"],
+             ["IMG_0619.JPG", "Chce Ci sie sikac? Jesli masz wiecej niz godzine do lotu skorzystaj z toalety, w przeciwnym wypadku lepiej najpierw znajdz swoja bramke. Toalety powinny byc w poblizu, w najgorszym wypadku skorzystasz w samolocie"],
+             ["IMG_0620.JPG", "Dol jest nie gorszym kierunkiem niz lewo i prawo"],
+             ["IMG_0621.JPG", "Zmeczyles sie chodzeniem? Skorzystaj z ruchomego chodnika"],
+             ["IMG_0622.JPG", "Im blizej Twojej bramki, tym bardziej szczegolowe znaki"],
+             ["IMG_0623.JPG", "W sklepach wszystko drozej niz w Krakowie"],
+             ["IMG_0626.JPG", "Potwierdz numer bramki"],
+             ["IMG_0627.JPG", "I podazaj za znakami"],
+             ["IMG_0628.JPG", "Znajdz swoja bramke"],
+             ["IMG_0632.JPG", "Jest!"],
+             ["IMG_0630.JPG", "Trzymaj sie blisko bramki. Mozesz zapytac obsluge o ktorej zacznie sie boarding. Jak oglasza boarding i zacznie sie ruch, stoj w kolejce dla Economy Class. W samolocie mozesz spac, czytac, albo skorzystac z komputera pokladowego. Komputer prawdopodobnie aktywuja dopiero po starcie. Znajdz tryb ktory pokaze menu na ktorym mozesz wybierac filmy, muzyke, gry, itp. Jesli masz problemy, popros stewardesse o pomoc. Jesli chce Ci sie pic, popros stewardesse o wode, cole, albo sok. W czasie lotu podadza Ci dwa posilki, jeden niedlugo po starcie, drugi niedlugo przed ladowaniem"],
+             ["IMG_2117.JPG", "Welcome to Singapore!"]
+            ] %>
+
+<% images.each do |img, desc| %>
+  <center>
+    <h2>
+      <%= desc %>
+    </h2>
+    <br/>
+    <%= image_tag "airport/#{img}", width: "80%" %>
+    <br/>
+<% end %>

@@ -1,0 +1,43 @@
+<h4>
+<% things = [
+             ["10 paczek", "Zelki"],
+             [1, "Paszport"],
+             ["x2", "Sandaly"],
+             [1, "Adidasy"],
+             [1, "Parasol"],
+             [1,"Aparat fotograficzny"],
+             [1,"Ladowarka do aparatu"],
+             [1,"Laptop"],
+             ["3", "Krotkie spodenki"],
+             [7, "T-shirt"],
+             [1, "Okulary przeciwsloneczne"],
+             [1, "Czapka z daszkiem"],
+             [1, "Jeansy"],
+             [1, "Koszula"],
+             [7, "Bokserki"],
+             [1, "Pizama"],
+             ["3 pary", "Skarpetki"],
+             ["250g", "Kabanosy (dla brata)"],
+             ["500g", "Kielbasa (dla Phyllis)"],
+             [1, "Szczoteczka do zebow"],
+             [2, "Elmex (dla brata)"],
+             [1, "Kindle (w bagazu podrecznym)"],
+             [1, "Zestaw ubran w bagazu podrecznym"],
+             [1, "Dezodorant"],
+             [1, "Lekka bluza z dlugim rekawem"],
+             [1, "Recznik"],
+             [1, "Ubezpieczenie podrozne"]
+            ] %>
+<table class="table">
+  <% things.each do |amount, thing| %>
+    <tr>
+      <td>
+        <%= amount %>
+      </td>
+      <td>
+        <%= thing %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+</h4>
