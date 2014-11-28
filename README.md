@@ -1,2 +1,3 @@
-singapore-site
+Sites
 ==============
+Static sites in Middleman

@@ -1,0 +1,101 @@
+@charset "utf-8";
+html{overflow-y:scroll;}
+body {font-size:10pt;text-align:center;font-family:sans-serif;font-color:black;font-weight:bold;}
+.main {display:inline-block;border:0px;}
+body.index .main {-webkit-animation-name:welcome;-webkit-animation-duration:.9s;}
+.main tr, .main td {border:0px;}
+
+font.name  {font-size:12pt;text-decoration:none;font-weight:bold;text-transform:uppercase;color:rgba(0, 0, 0, 1.0);line-height:150%;}
+
+div.page {
+    width:1000px;
+    margin:0 auto;
+}
+
+tr.logo {
+    height:200px;
+    text-align: center;
+}
+img.logo {
+    margin-left: 110px;
+    float: left;
+}
+
+#box {
+    border-style: solid;
+    border-color: #009ee2;
+    border-width: 4px;
+    font-size: 8px;
+    overflow: hidden;
+    font-family:Tahoma;
+    padding-left:8px;
+    width: 9px;
+    height: 9px;
+    position: relative;
+    top: -197px;
+    left: 31px;
+}
+
+#box.empty {
+    border-color: white;
+    left: 49px;
+}
+
+.menu {font-size:12pt;width:150px;text-align:right;vertical-align:top;}
+.menu a {font-size:12pt;text-decoration:none;font-weight:bold;text-transform:uppercase;color:rgba(0, 0, 0, 1.0);line-height:150%;}
+.menu a:hover {color:#009ee2;}
+td.menu {line-height:20pt}
+.empty {width:110px;}
+
+.content {width:700px;text-align:left;vertical-align:top;}
+
+table.hidden{display:none;}
+
+/* offer */
+font.quote {font-style:italic;}
+font.author {font-weight:bold;color:#9e9e9e;}
+table.offer{padding-bottom:10px;}
+table.offer .header {font-weight:bold;color:#9e9e9e;text-transform:uppercase;}
+
+/* experience */
+tr.parent td {font-size:12pt;cursor:pointer;padding-bottom:10px;font-weight:bold;color:#9e9e9e;}
+tr.parent td:hover {color:#009ee2;}
+tr.bump {height:20px;}
+/*tr.active {color:#009ee2;}*/
+tr.child {vertical-align: top; padding-bottom:10px;}
+tr.child td.date {width: 135px;}
+tr.child td.firm {width: 320px;}
+tr.child td.title {width: 225px;}
+tr.child td {padding-bottom:10px;}
+tr.hidden {display: none;}
+td.desc{font-weight:normal;}
+
+/* contact */
+
+a {text-decoration:none;color:#9e9e9e;}
+.contact .first{color:#9e9e9e;text-transform:uppercase;}
+table.contact {width:240px;}
+td.first {width:100px;text-align:left;}
+td.second {width:140px;text-align:right;}
+.clear {
+    clear: both; }
+
+
+@-webkit-keyframes welcome {
+  from {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+   -webkit-transform: scale(0);
+   opacity: 0;
+  }
+  82.5% {
+    -webkit-transform: scale(1.03);
+    -webkit-animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}

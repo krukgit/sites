@@ -1,0 +1,48 @@
+---
+title: Slawomir Kruk Doradztwo Biznesowe
+---
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= data.page.title || "Doradztwo Biznesowe S.Kruk"%></title>
+    <link rel="icon" type="image/png" href="images/favicon.png"
+
+    <%= stylesheet_link_tag "normalize", "all" %>
+    <%= javascript_include_tag  "all" %>
+
+    <%= partial "google_analytics" %>
+  </head>
+  
+  <body class="<%= page_classes %>">
+  <div class="page">
+    <table class="main">
+      <tr class="logo">
+	<th colspan=3>
+	  <%= image_tag '../images/logo.png', :width => 399, :class => "logo" %>
+	</th>
+      </tr>
+      <tr>
+	<td class="menu">
+	  <%= link_to "oferta", "#", :class => "offer", :id => "offer" %><br/>
+	  <%= link_to "doświadczenie", "#", :class => "experience" %><br/>
+	  <%= link_to "kontakt", "#", :class => "contact"%><br/>
+<span id="box" class="box empty">&nbsp;</span><span id="box" class="box blue">&nbsp;</span>	
+	</td>
+	<td class="empty"></td>
+	<td class="content">
+	    <%= partial "offer" %>
+	    <%= partial "experience" %>
+	    <%= partial "contact" %>
+	</td>
+      </tr>
+    </table>
+    </div>
+  </body>
+</html>

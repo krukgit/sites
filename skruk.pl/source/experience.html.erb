@@ -1,0 +1,117 @@
+<%
+  list = ["WYKSZTAŁCENIE", "SZKOLENIA", "LICENCJE"]
+  data = {
+   "WYKSZTAŁCENIE" => [
+{:date => "2013", :desc => "Akademia Krakowska – Business Intelligence Controlling studia podyplomowe"},
+{:date => "1999-2001", :desc => "Akademia Ekonomiczna w&nbsp;Krakowie – Specjalność: Zarządzanie Firmą studia magisterskie<br/>– praca magisterska dot. restrukturyzacji KWK Janina"},
+{:date => "1995-1999", :desc => "Akademia Ekonomiczna w&nbsp;Krakowie Specjalność: Zarządzanie Firmą studia licencjackie <br/>– praca licencjacka dot. restrukturyzacji zatrudnienia"},
+{:date => "1994-1995", :desc => "Akademia Górniczo Hutnicza w&nbsp;Krakowie – Wydział Zarządzania"}],
+   "LICENCJE" => [
+{:date => "2012 VII-IX", :desc => "Europejska Federacja Doradców Finansowych – uzyskanie <br/>Certyfikatu - Profesjonalny Doradca Finansowy EFG"},
+{:date => "2005", :desc => "Mediator spraw gospodarczych - Wpis w&nbsp;Sądzie Okręgowym w&nbsp;Krakowie"}],
+   "SZKOLENIA" => [
+{:date => "2012-2013", :desc => "Optymalizacja kosztów – Instytut Rozwoju Biznesu Warszawa<br/>Akademia E-CONTROLLINGU – „Actios Controlling” Rzeszów<br/>Profesjonalny Doradca Finansowy – „Art. Of Finance” Kraków"},
+{:date => "2012", :desc => "Kompetencje Menadżerskie – „InBIT” Kraków"},
+{:date => "1991-2011", :desc => "Zarządzanie Projektami z&nbsp;godnie z&nbsp;regułami Unii Europejskiej<br/>Szkolenie dla menadżerów małych i&nbsp;średnich przedsiębiorstw<br/>Wdrożenie systemów kontrolingowych, szkolenia w&nbsp;zakresie obsługi<br/>programów komputerowych Excel, Symfonia, MS Dynamics AX, <br/>Przekształcenie polskich przedsiębiorstw, prawo upadłościowe <br/>i naprawcze (nowe i&nbsp;stare), likwidacja przedsiębiorstw, Motywowanie<br/>pracowników, bieżące szkolenia związane ze zmienianym ustawodawstwem <br/>w obszarach prawa gospodarczego, podatkowego, pracy itp."}]
+}
+
+ exp = [
+{:date => "V 2012 – nadal", :firm => "Doradztwo Biznesowe", :title => "działalność własna", :desc => "Sporządzanie analiz,  prognoz finansowych, wycen Spółek,
+ opracowywanie programów naprawczych firm, analiz opłacalności inwestycji, biznes planów, budżetów, administrowanie budynkiem biurowym w&nbsp;Chrzanowie."},
+
+{:date => "VII 2010 – III 2012", :firm => "POLDIM SA", :title => "Dyrektor Finansowy Kontraktu", :desc => "Budowa odcinka autostrady A1 - kierowanie Pionem Finansowym
+ Kontraktu, rozliczania kontraktu o&nbsp;wartości 547 mln PLN w&nbsp;Systemie Microsoft Dynamics AX, sporządzanie budżetów, sprawozdawczość, sporządzanie raportów i&nbsp;prognoz
+  dla Zarządu Spółki, oraz dla Zarządu Grupy Kapitałowej. Negocjacje z&nbsp;Kontrahentami oraz z&nbsp;Inwestorem, współudział we wdrażaniu ww. systemu na kontrakcie."},
+
+{:date => "X 2009 – VI 2010", :firm => "POLDIM SA", :title => "Analityk finansowy", :desc => "Współtworzenie Działu Nowych Technologii, sporządzanie analiz finansowych
+oraz analiz opłacalności zastosowania nowych przedsięwzięć inwestycyjnych."},
+
+{:date => "V 2007– X 2009", :firm => "POLDIM SA", :title => "Pełnomocnik Zarządu ds. Finansowych", :desc => "Wartość projektu powyżej 146 mln PLN. Rozliczanie
+ kontraktu dla Firmy, przygotowywanie analiz finansowych dla GDDKiA związanych z&nbsp;roszczeniami, rozliczanie kontraktu w&nbsp;ramach konsorcjum ze Spółką Strabag."},
+
+{:date => "2006– 2007", :firm => "M&I Doradztwo Inwestycyjne", :title => "Analityk Finansowy", :desc => "Kontrakt - modernizacja DK-7 Kiezmark – Jazowa,
+ wartość kontraktu 25 mln EUR, sporządzanie analiz związanych z&nbsp;przygotowywanymi roszczeniami finansowymi do Inwestora w&nbsp;ramach FIDIC." },
+
+{:date => "2005 - 2010", :firm => "Doradztwo Gospodarcze Sławomir Kruk", :title => "", :desc => "" },
+
+{:date => "2007 – 2008", :firm => "M&I Doradztwo Inwestycyjne", :title => "Przewodniczący Rady Nadzorczej", :desc => "" },
+
+{:date => "2000 – 2005", :firm => "", :title => "Syndyk masy upadłości", :desc => "Prowadzenie sądowych postępowań układowych oraz upadłościowych:
+ Wytwórnia Materiałów Budowlanych „Sembet” w&nbsp;Krakowie, Specjalistyczne Przedsiębiorstwo Usługowe „Eurobud Alwernia” sp. z&nbsp;o.o., PHRU „Jakor” sp. z&nbsp;o.o.
+  w&nbsp;Libiążu, PRMKS „Restal” sp. z&nbsp;o.o. w&nbsp;Libiążu,  Towarzystwo Współpracy Regionalnej” sp. z&nbsp;o.o. w&nbsp;Krakowie" },
+
+{:date => "V 2002 – i&nbsp;2004", :firm => "Bank Spółdzielczy", :title => "Kierowanie Zespołem ds. windykacji i&nbsp;restrukturyzacji trudnych kredytów", :desc => "Opracowanie
+ strategii działania Zespołu, negocjacje z&nbsp;kredytobiorcami." },
+
+{:date => "2002 - 2004", :firm => "PPHU Elma Serwis sp. z&nbsp;o.o.", :title => "Członek Rady Nadzorczej", :desc => "" },
+
+{:date => "VI 2001 – IX 2001", :firm => "Przedsiębiorstwo Usług Socjalnych „HUT PUS” S.A. Kraków", :title => "Konsultant", :desc => "Opracowanie dokumentacji w&nbsp;celu 
+powołania spółki z&nbsp;branży turystycznej, z&nbsp;kapitałem około 20 mln PLN, sporządzenie analiz, prognoz finansowych, udział w&nbsp;negocjacjach. Opracowanie biznes planu oraz 
+przygotowanie projektów umów." },
+
+{:date => "2001 - 2003", :firm => "Agencja Rozwoju Ziemi Chrzanowskiej” S.A.", :title => "Przewodniczący Rady Nadzorczej ", :desc =>"" },
+
+{:date => "IV 2000 – V 2001", :firm => "Biuro Handlowe „PEMUG” sp. z&nbsp;o.o.", :title => "Wiceprezes Zarządu ds. Finansowych", :desc => "Opracowanie projektu i&nbsp;powołanie 
+spółki zależnej, negocjowanie zasad współpracy, opracowywanie większości dokumentów związanych z&nbsp;powołaniem spółki, opracowanie umów, biznes planu." },
+
+{:date => "VII 1999 – III 2000", :firm =>"Przedsiębiorstwo Montażu Konstrukcji Stalowych i&nbsp;Urządzeń Górniczych „Pemug” S.A.", :title => "Pełnomocnik Zarządu",
+ :desc => "Utworzenie zależnej spółki kapitałowej, negocjowanie warunków współpracy z&nbsp;Grupą Kapitałową i&nbsp;kooperantami." },
+
+{:date => "IX 1998 – X 1999", :firm =>"Nadwiślańskie Biuro Doradztwa i&nbsp;Obsługi Podmiotów Gospodarczych oraz Analiz Finansowych „INTER CONSULTING” sp. z&nbsp;o.o.",
+ :title => "Wiceprezes Zarządu ds. Finansowych", :desc => "Współpraca z&nbsp;podwykonawcami w&nbsp;zakresie szkód górniczych. Opracowanie i&nbsp;próba wdrożenia projektu integracji spółek 
+powiązanych kapitałowo z&nbsp;Nadwiślańską Spółką Węglową S.A." },
+
+{:date => "XI 1994 – V 1997", :firm => "Przedsiębiorstwo Usługowe „WONAM” sp. z&nbsp;o.o.", :title => "Prezes Zarządu", :desc => "Restrukturyzacja organizacyjna spółki - 
+zmiana struktury organizacyjnej, zmiana systemu motywacyjnego, wprowadzenie ocen stanowiska i&nbsp;ocen pracy. Dywersyfikacja działalności, dalszy proces prywatyzacji." },
+
+{:date => "X 1992 – IX 1994", :firm => "Przedsiębiorstwo Budownictwa Mieszkaniowego Przemysłu Węglowego „KOMBUD” w&nbsp;upadłości", :title => "Pełnomocnik Syndyka ds. 
+Zarządzania", :desc => "Zarządzanie majątkiem ogromnego kombinatu budowlanego wartości ponad 20 mln zł., cztery odrębne zakłady położone na łącznej pow. ok. 50 ha. 
+sprzedaż zorganizowanych części przedsiębiorstwa, najem dzierżawa, administrowanie, kierowanie Zespołem kilkunastoosobowym." },
+
+{:date => "IV 1991 – X 1992", :firm => "Przedsiębiorstwo Usługowe „BUDOKOP” sp. z&nbsp;o.o.", :title => "Prezes Zarządu", :desc => "Tworzenie przedsiębiorstwa w&nbsp;związku z&nbsp;
+prywatyzacją oddziałów powierzchniowych KWK „JANINA”, następnie pełnienie obowiązków Prezesa Zarządu (była to jedna z&nbsp;pierwszych prywatyzacji w&nbsp;tych okolicach)." },
+]
+
+%>
+<table class="experience hidden">
+  <% list.each do |k| %>
+  <% v = data[k] %>
+    <tr class="parent">
+      <td colspan=3>
+	<%= k %>
+      </td>
+    </tr>
+    <% v.each do |r| %>
+      <tr class="child hidden">
+	<td class="date"><%= r[:date] %></td>
+	<td class="desc" colspan=2><%= r[:desc] %></td>
+      </tr>
+    <% end %>
+    <tr class="child hidden">
+      <td>&nbsp;</td><td>&nbsp;</td>
+    </tr>
+  <% end %>
+
+    <tr class="parent">
+      <td colspan=3>
+	DOŚWIADCZENIE ZAWODOWE
+      </td>
+    </tr>
+    <% exp.each do |r| %>
+      <tr class="child hidden">
+	<td class="date"><%= r[:date] %></td>
+	<td class="firm"><%= r[:firm] %></td>
+	<td class="title"><%= r[:title] %></td>
+      </tr>
+      <tr class="child hidden">
+	<td class="date">&nbsp;</td>
+	<td class="desc" colspan=2><%= r[:desc] %></td>
+      </tr>
+    <% end %>
+    <tr class="child hidden">
+      <td>&nbsp;</td><td>&nbsp;</td>
+    </tr>
+ 
+
+
+</table>
