@@ -1,22 +1,42 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
   <head>
+
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <!-- Always force latest IE rendering engine or request Chrome Frame -->
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <title>Agency - Start Bootstrap Theme</title>
 
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= "KrukWorld" %></title>
-    <link rel="icon" type="image/png" href="favicon.png"/>
+    <!-- Bootstrap Core CSS -->
+    <%= stylesheet_link_tag "bootstrap.min", "agency", "font-awesome/font-awesome" %>
 
-    <%= stylesheet_link_tag "normalize", "all" %>
-    <%= javascript_include_tag  "all" %>
+    <!-- Custom Fonts -->
+
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
   </head>
-
-  <body class="<%= page_classes %>">
-    <%= image_tag 'bkg_left.jpg', style: "z-index:0; top:0;left:0;height:100%;position:absolute;" %>
-    <%= image_tag 'bkg_right.jpg', style: "z-index:0; top:0;right:0;height:100%;position:absolute;" %>
+  <body id="page-top" class="index">
+    <%= partial 'layouts/navbar' %>
     <%= yield %>
+    <!-- jQuery -->
+    <%= javascript_include_tag "jquery", "bootstrap.min" %>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <%= javascript_include_tag "classie", "cbpAnimatedHeader", "jqBootstrapValidation", "contact_me", "agency" %>
   </body>
 </html>
