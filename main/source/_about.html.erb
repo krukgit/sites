@@ -1,3 +1,18 @@
+<% items = [
+	 [0, '2004-2007', 'V LO High School in Krakow, Poland', 'In 2004 I moved to Krakow in order to get better education. Things I learned and people I met had a huge impact on who I am now.'],
+	 [2, '2007-2011', 'AGH University of Science and Technology in Krakow, Poland', 'Took up Computer Science at local university renowned for its strong technical curriculum and practical approach. '],
+	 [3, 'June 2007 - Sept 2007', 'Institute of Nuclear Physics PAN, Poland', 'My programming contests experience helped me land my first summer job building classification tools for particle detectors.'],
+	 [4, 'Sept 2007, Feb 2008, Aug 2008', 'CERN, Switzerland', 'Thanks to my previous work I got a few opportunities to work directly with the Large Hadron Collider in Switzerland during my Summer and Winter breaks.'],
+	 [3, 'July 2009 - Aug 2011', 'Institute of Nuclear Physics PAN, Poland', 'When INP decided to build a private cloud system I and two of my friends were responsible for the initial research phase and the first prototype. In time the team grew to 8 people.'],
+	 [6, 'July 2010 - Sept 2010', 'ESISAR, Grenoble Institute of Technology, France', 'While studying at AGH I received an opportunity to participate in the LLP ERASMUS programme so I spent 3 months in France working on water canals simulation program.'],
+	 [2, '2011-2013', 'AGH University of Science and Technology in Krakow, Poland', 'In 2011 I graduated with a degree of Engineer (similar to BSc but requires additional technical subjects). I decided to continue studies and joined the Master\'s programme.'],
+	 [8, 'Jan 2012 - Aug 2012', 'Fujitsu Laboratories Ltd, Japan', 'In Jan 2011 I applied for a participation in the Vulcanus in Japan programme. Along with 29 other students from all over Europe I moved to Japan for a year. I spent 8 months of that time working as an intern in Fujitsu Laboratories.'],
+	 [9, 'Oct 2012 - Nov 2013', 'u2i LLC in Krakow, Poland', 'While in my last year of University I joined a consulting company with development office in Krakow. Here I learned what a well managed project looks like and I was hooked. After graduating I decided to marry my girlfriend of 3 years. That meant I had to move to Singapore. My boss showed a lot of support. A month before leaving he promoted me to Senior Developer and offered to keep me as a remote worker while I look for a job and apply for Visa.'],
+	 [10, 'Dec 2013 - NOW', 'Sugar Ventures, formerly Gilcrux Holdings, Singapore', 'I was offered a job at a holdings company owning a number of local startups. While there I worked on a number of web projects: Kluje, Voicemap, Folr, MeetDrinks, SOML. I designed the systems, built the infrastructure, created APIs. In 2014 the company split into two and I was elevated to be in charge of the development team. Nowadays I split my work between coding, interviewing and managing teams and products.']
+] %>
+
+
+
 <section id="about">
   <div class="container">
     <div class="row">
@@ -9,66 +24,26 @@
     <div class="row">
       <div class="col-lg-12">
         <ul class="timeline">
-          <li>
-            <div class="timeline-image">
-	      <%= image_tag "about/1.jpg", class: "img-circle img-responsive", alt: "" %>
-            </div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4>2009-2011</h4>
-                <h4 class="subheading">Our Humble Beginnings</h4>
+	  <% items.each_with_index do |item, i| %>
+            <li class="<%= i%1 == 0 ? '' : 'timeline-inverted' %>">
+              <div class="timeline-image">
+		<%= image_tag "about/#{item[0]}.jpg", class: "img-circle img-responsive", alt: "" %>
               </div>
-              <div class="timeline-body">
-                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+              <div class="timeline-panel">
+		<div class="timeline-heading">
+                  <h4><%= item[1] %></h4>
+                  <h4 class="subheading"><%= item[2] %></h4>
+		</div>
+		<div class="timeline-body">
+                  <p class="text-muted"><%= item[3] %></p>
+		</div>
               </div>
-            </div>
-          </li>
+            </li>
+	  <% end %>
           <li class="timeline-inverted">
             <div class="timeline-image">
-              <%= image_tag "about/2.jpg", class: "img-circle img-responsive", alt: "" %>
-            </div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4>March 2011</h4>
-                <h4 class="subheading">An Agency is Born</h4>
-              </div>
-              <div class="timeline-body">
-                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="timeline-image">
-	      <%= image_tag "about/3.jpg", class: "img-circle img-responsive", alt: "" %>
-            </div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4>December 2012</h4>
-                <h4 class="subheading">Transition to Full Service</h4>
-              </div>
-              <div class="timeline-body">
-                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-              </div>
-            </div>
-          </li>
-          <li class="timeline-inverted">
-            <div class="timeline-image">
-	      <%= image_tag "about/4.jpg", class: "img-circle img-responsive", alt: "" %>
-            </div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4>July 2014</h4>
-                <h4 class="subheading">Phase Two Expansion</h4>
-              </div>
-              <div class="timeline-body">
-                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-              </div>
-            </div>
-          </li>
-          <li class="timeline-inverted">
-            <div class="timeline-image">
-              <h4>Be Part
-                <br>Of My
+              <h4>Be a part
+                <br>of my
                 <br>Story!</h4>
             </div>
           </li>

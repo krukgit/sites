@@ -2,13 +2,11 @@
 projects = [
 	      {
 	        title: "Nielsen Social",
-	        short_description: "Big Data",
-	        long_description: "Twitter TV Analytics startup aquired by the largest TV analytics company in the World."
+	        short_description: "Twitter TV Analytics"
 	      },
 	      {
 	        title: "Kluje",
-  	        short_description: "Online marketplace for contractors",
-	        long_description: "Singapore startup connecting Homeowners with Contractors."
+  	        short_description: "Online marketplace for contractors"
 	      },
 	      {
 	        title: "Voicemap",
@@ -16,17 +14,15 @@ projects = [
 	      },
 	      {
                 title: "Folr",
-	        short_description: "App that helps you keep track of your employees"
+	        short_description: "Keep track of your employees"
               },
               {
                 title: "MeetDrinks",
                 short_description: "Social meet-up application",
-                long_description: "MeetDrinks is a social meet-up application that brings people closer together over a mutual appreciation for bespoke drinks and elegant conversations. The app matches compatible urbanites in the same area to meet for drinks."
               },
               {
                 title: "SOML",
-                short_description: "Story of My Life",
-                long_description: "App for sharing stories"
+                short_description: "Story of My Life"
               }
 ]
 projects.each{|project| project[:slug] = project[:title].parameterize.underscore}
